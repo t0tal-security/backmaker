@@ -5,5 +5,8 @@ backmaker.py
 AsciiFile class
 	It's the file managing class. 
 	Sanitized user input variable will be used over the class. Input will be a file path.
-	Will have several more functions beside those which are right now ( and which are pretty straightforward )
-	
+	Will have several more functions beside those which are right now ( and which are pretty straightforward ).
+
+
+systemHelpers functions
+	functions that support retrieving values that would not fit on the class matter
