@@ -1,3 +1,8 @@
+[ v0.2.3 ]
+Keeping files more version restrictive.
+Using MAJOR.MINOR.PATCH notation.
+
+
 [ v0.2.2.1 ] - Latest
 	Update README.md
 
