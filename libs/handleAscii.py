@@ -15,7 +15,8 @@ class AsciiFile:
     def __str__(self) -> str:
         return self.file_Path
 
-    
+    # Self-used
+
     def sanitizeUserInput(self, M_user_input: str) -> str:
         sanitized_User_Input = M_user_input
         # Sanitizing user's input code
@@ -33,7 +34,10 @@ class AsciiFile:
             exit()
         
         return os.path.abspath(self.file_Path)
-        
+
+
+    # User-used        
+
 
     def readFileContent(self) -> str:
         absolute_File_Path = self.getAbsolutePath()

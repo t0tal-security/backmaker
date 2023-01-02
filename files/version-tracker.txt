@@ -1,0 +1,9 @@
+[ v0.2.2 ] - Latest
+	Updated .gitignore: !__init__.py
+	Changed files extensions: files/*.txt
+	Divided methods in handleAscii.py on self-used and user-used. 
+		Self-used are those used between the functions for their better work.
+		User-used those mostly user-needed.
+
+[ v0.2.1.3 ] - Latest
+	Update README.md

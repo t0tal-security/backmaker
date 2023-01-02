@@ -2,3 +2,4 @@ visuals/logo-*
 test*
 tasks
 libs/__*
+!__init__.py
