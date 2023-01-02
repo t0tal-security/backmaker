@@ -1,0 +1,24 @@
+Naming schema for the classes, functions, variables, methods etc.
+Bear in mind those are especially provided by me. Despite my best effort, they most likely won't be comptabile with any kind of PEP8 or other standards.
+I'm just still learning and focusing on other subjects ( not with the programming in the first place )
+
+
+filenames
+	doSomething.py
+
+classes
+	NameSomething <- takes no parameters. those will be passed to __init__. Name should represent it's only one, main functionality.
+
+functions/methods
+	isSomethingDone(F_param_of_something1:<type>="default-value_or-not") -> <return_type>:
+	setSomethingToSomeState(self, M_param_for_set_state:<type>="default-value") -> <return_type>:
+	F_ for Function
+	M_ for Method
+	
+variables
+	amount_Of_What = "some_value"
+	count_Of_Something = 0
+
+constants
+	PROCESS_NAME = "gigig"
+

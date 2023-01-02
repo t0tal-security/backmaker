@@ -1,0 +1,9 @@
+backmaker.py
+	Handles the backup choice process.
+	Uses some self-defined system helping functions like for now a clearScreen().
+
+AsciiFile class
+	It's the file managing class. 
+	Sanitized user input variable will be used over the class. Input will be a file path.
+	Will have several more functions beside those which are right now ( and which are pretty straightforward )
+	
