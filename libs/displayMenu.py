@@ -13,6 +13,7 @@ class DisplayMenu:
         
         user_Input            =        handleAscii.AsciiObject()
 
+        self.menu_Message        =        user_Input.sanitizeUserInput(M_menu_message)
         self.message_Tab_Indents = "\t" * user_Input.sanitizeUserInput(M_message_tab_indents)      
         self.menu_Options        =        user_Input.sanitizeUserInput(M_menu_options)
         self.option_Count_From   =        user_Input.sanitizeUserInput(M_option_count_from)
@@ -26,7 +27,8 @@ class DisplayMenu:
         if self.end_With_Newline == True:
             new_line = "\n"
 
-        print(f"{self.message_Tab_Indents}{user_Input.sanitizeUserInput(M_menu_message)}{new_line}")
+
+        print(f"{self.message_Tab_Indents}{self.menu_Message}{new_line}")
         
 
     def getMenuKeys(self) -> str:        # <class 'dict_keys'>

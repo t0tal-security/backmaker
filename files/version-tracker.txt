@@ -1,3 +1,6 @@
+[ v0.3.1 ]
+	Added M_menu_message variable
+
 [ v0.3 ]
 	Changed AsciiFile class name to AsciiObject so it now supports the copy of insides of the directory provided
 Provide boolean copy_Recursive option to specify whether to copy the contents of directories found in <path> directory or not
