@@ -5,8 +5,8 @@
 import os
 
 
-class AsciiFile:
-    def __init__(self, M_file_path: str) -> None:
+class AsciiObject:
+    def __init__(self, M_file_path: str="") -> None:
         # Log message "Initialization of '<file>' file object"
         
         self.file_Path = self.sanitizeUserInput(M_file_path)
@@ -15,10 +15,13 @@ class AsciiFile:
     def __str__(self) -> str:
         return self.file_Path
 
+
     # Self-used
 
+
     def sanitizeUserInput(self, M_user_input: str) -> str:
-        sanitized_User_Input = M_user_input
+        sanitized_User_Input = M_user_input        
+
         # Sanitizing user's input code
         
         return sanitized_User_Input
@@ -51,6 +54,7 @@ class AsciiFile:
     def printFileContent(self):
         file_Content = self.readFileContent()
         print(file_Content) 
+
 
 
 if __name__ == "__main__":

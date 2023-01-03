@@ -2,11 +2,24 @@ backmaker.py
 	Handles the backup choice process.
 	Uses some self-defined system helping functions like for now a clearScreen().
 
-AsciiFile class
-	It's the file managing class. 
+AsciiObject class
+	It's the file managing class.
+	Empty M_file_path = only use for AsciiObject's functions
 	Sanitized user input variable will be used over the class. Input will be a file path.
 	Will have several more functions beside those which are right now ( and which are pretty straightforward ).
 
 
+DisplayMenu
+def __init__(self, M_menu_message: tuple,  M_menu_options: dict, M_options_Count_From: int=1, M_menu_tab_indents: int=0) -> None:
+	M_menu_message: gets pair with "Message" and Tabs Indentations
+
+	Simple class displaying a menu options provided by user.
+    It gets a dictionary of elements where:
+        keys:   are the options user wants to display --> [M_options_Count_From] {M_user_input}
+
+        values: are the functions that will be initialized after call
+
 systemHelpers functions
 	functions that support retrieving values that would not fit on the class matter
+	clearScreen on the beginnings
+	and somewhere between the updates the getSystemVersion was found
