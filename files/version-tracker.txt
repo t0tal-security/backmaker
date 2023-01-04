@@ -1,5 +1,22 @@
+[ v0.3.2 ]
+	Changed displayMenu getKeyValues(), variables and data types
+	Modified getAbsolutePath
+	Added isAbsolutePath to handleAscii
+	displayMenu.__init__: Removed check that checks if boolean var is True after it has been checked for being False. 
+		If it is False, then it is not True, so set the corresponding value with False scenario.
+		Later in __init__, divided M_menu_options into to *more* variables. One of them for menu_Keys, another for menu_Values.
+		They will store accordingly a user's provided text and the set of commands that will execute after choosing that key as a choice.
+	Renamed getKeyIndex to getOptionIndex 
+Improve getOptionIndex in displayMenu
+	Removed getMenuKeys() from DisplayMenu. They are now provided as self objects of the class in init, along with menu_Values.
+	Thus, no need for the function returning the same output.
+Add exception handling library
+Get value of given key so the holding function of a key can be executed.
+
+
 [ v0.3.1 ]
 	Added M_menu_message variable
+
 
 [ v0.3 ]
 	Changed AsciiFile class name to AsciiObject so it now supports the copy of insides of the directory provided
@@ -11,8 +28,7 @@ Provide boolean copy_Recursive option to specify whether to copy the contents of
 	Changed few variable names for better code reading (handleAscii)
 
 Add functions that checks if path provides to file or folder -- HandleAscii
-Provide displayMenu object options
-Add check that if M_option_count_from then if backpath available, set 99 as back option if M_option_count_from = 0 or set 0 if M_option_count_from = 1
+Add check for the value that can't match a backpath
 Then make that option index can not be equal to back option  
 
 

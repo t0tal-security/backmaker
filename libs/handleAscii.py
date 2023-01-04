@@ -28,14 +28,14 @@ class AsciiObject:
 
 
     def doesExistPath(self) -> bool:
-        return os.path.exists(self.file_Path)
+        return os.path.exists(self.getAbsolutePath())
 
 
-    def getAbsolutePath(self) -> str:
-        if self.doesExistPath() == False:
-            print("(logLib: Error) Path does not exist")
-            exit()
-        
+    def isAbsolutePath(self) -> bool:
+       return os.path.isabs(self.file_Path)
+
+
+    def getAbsolutePath(self) -> str:      
         return os.path.abspath(self.file_Path)
 
 
@@ -44,6 +44,10 @@ class AsciiObject:
 
     def readFileContent(self) -> str:
         absolute_File_Path = self.getAbsolutePath()
+
+        if self.doesExistPath() == False:
+            raise FileNotFoundError(f"'{absolute_File_Path}' not found")
+            
         
         with open(absolute_File_Path, "r") as file_To_Read:
                 file_Content = file_To_Read.read()
@@ -52,10 +56,15 @@ class AsciiObject:
 
 
     def printFileContent(self):
-        file_Content = self.readFileContent()
-        print(file_Content) 
+        try:
+            file_Content = self.readFileContent()
+        except FileNotFoundError as FNFE:
+            print(f"Error: {FNFE}")
+            exit()
+        else:
+            print(file_Content) 
 
 
 
 if __name__ == "__main__":
-    pass #    file_Logo = AsciiFile("visuals/logo.txt")
+    pass #AO = AsciiObject("")
