@@ -9,6 +9,10 @@ class AsciiObject:
     def __init__(self, M_file_path: str="") -> None:
         # Log message "Initialization of '<file>' file object"
         
+        if M_file_path == "":
+            raise ValueError("Provide path to the object")
+
+
         self.file_Path = self.sanitizeUserInput(M_file_path)
         
     
@@ -46,9 +50,8 @@ class AsciiObject:
         absolute_File_Path = self.getAbsolutePath()
 
         if self.doesExistPath() == False:
-            raise FileNotFoundError(f"'{absolute_File_Path}' not found")
+            raise FileNotFoundError(f"Provided non-existent file '{absolute_File_Path}' to read")
             
-        
         with open(absolute_File_Path, "r") as file_To_Read:
                 file_Content = file_To_Read.read()
         
@@ -59,7 +62,7 @@ class AsciiObject:
         try:
             file_Content = self.readFileContent()
         except FileNotFoundError as FNFE:
-            print(f"Error: {FNFE}")
+            print(FNFE)
             exit()
         else:
             print(file_Content) 

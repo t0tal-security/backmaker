@@ -1,17 +1,30 @@
+[ v0.3.3 ]
+	-Small code touches for sake of code beautifying (handleAscii)
+	-Completely removed displayMenu. 
+		At this moment it is more problematic than helpful. It was complete mess and disaster, even for such newbie project. Waste of time.
+		Just made the overall ( menu thing ) super simple so I can improve on it later. 
+			The Rome was also not Rome at it first days. It started from couple of buildings also :)
+	-Added few functions in backmaker instead
+Add such screen clearing that when user inputs non-integer input it won't spam "provide int number" just reappear in one place
+Make a way to display choices, like i.e when I'll specify Folder option, then I want to be asked whether this has to be recurisve or not
+	Or with lists, provided or default saved in script folder
+
+ 
+
 [ v0.3.2 ]
-	Changed displayMenu getKeyValues(), variables and data types
-	Modified getAbsolutePath
-	Added isAbsolutePath to handleAscii
-	displayMenu.__init__: Removed check that checks if boolean var is True after it has been checked for being False. 
+	-Changed displayMenu getKeyValues(), variables and data types
+	-Modified getAbsolutePath
+	-Added isAbsolutePath to handleAscii
+	-displayMenu.__init__: Removed check that checks if boolean var is True after it has been checked for being False. 
 		If it is False, then it is not True, so set the corresponding value with False scenario.
-		Later in __init__, divided M_menu_options into to *more* variables. One of them for menu_Keys, another for menu_Values.
+		-Later in __init__, divided M_menu_options into to *more* variables. One of them for menu_Keys, another for menu_Values.
 		They will store accordingly a user's provided text and the set of commands that will execute after choosing that key as a choice.
-	Renamed getKeyIndex to getOptionIndex 
-Improve getOptionIndex in displayMenu
-	Removed getMenuKeys() from DisplayMenu. They are now provided as self objects of the class in init, along with menu_Values.
-	Thus, no need for the function returning the same output.
+	-Renamed getKeyIndex to getOptionIndex 
+displayMenu non existent -- Improve getOptionIndex in displayMenu
+	-Removed getMenuKeys() from DisplayMenu. They are now provided as self objects of the class in init, along with menu_Values.
+	 Thus, no need for the function returning the same output.
 Add exception handling library
-Get value of given key so the holding function of a key can be executed.
+displayMenu non existent -- Get value of given key so the holding function of a key can be executed.
 
 
 [ v0.3.1 ]
@@ -29,7 +42,7 @@ Provide boolean copy_Recursive option to specify whether to copy the contents of
 
 Add functions that checks if path provides to file or folder -- HandleAscii
 Add check for the value that can't match a backpath
-Then make that option index can not be equal to back option  
+displayMenu non existent -- Then make that option index can not be equal to back option  
 
 
 [ v0.2.3 ]
