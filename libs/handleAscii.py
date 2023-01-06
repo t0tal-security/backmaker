@@ -43,6 +43,11 @@ class AsciiObject:
         return os.path.abspath(self.file_Path)
 
 
+    def getHashSum(self) -> str:
+        # MD5, SHA1, SHA256, SHA512
+        pass
+
+
     # User-used        
 
 
@@ -71,3 +76,4 @@ class AsciiObject:
 
 if __name__ == "__main__":
     pass #AO = AsciiObject("")
+    

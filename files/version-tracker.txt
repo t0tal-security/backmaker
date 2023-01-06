@@ -1,13 +1,20 @@
-[ v0.3.3 ]
+[ v0.4.1 ]
+	-Added F_go_back in getChoice() for later development
+	-Added to_do.txt to keep track of the tasks that are needed to be done or just some ideas.
+
+
+
+[ v0.4 ]
+	-v0.3.3 was renamed to v0.4 because of the entire class deletion. Change should be visible in releases, however there still resides v0.3.3 version in description and version-tracker.txt
+	
 	-Small code touches for sake of code beautifying (handleAscii)
 	-Completely removed displayMenu. 
 		At this moment it is more problematic than helpful. It was complete mess and disaster, even for such newbie project. Waste of time.
 		Just made the overall ( menu thing ) super simple so I can improve on it later. 
 			The Rome was also not Rome at it first days. It started from couple of buildings also :)
 	-Added few functions in backmaker instead
-Add such screen clearing that when user inputs non-integer input it won't spam "provide int number" just reappear in one place
-Make a way to display choices, like i.e when I'll specify Folder option, then I want to be asked whether this has to be recurisve or not
-	Or with lists, provided or default saved in script folder
+
+	
 
  
 
@@ -23,7 +30,7 @@ Make a way to display choices, like i.e when I'll specify Folder option, then I 
 displayMenu non existent -- Improve getOptionIndex in displayMenu
 	-Removed getMenuKeys() from DisplayMenu. They are now provided as self objects of the class in init, along with menu_Values.
 	 Thus, no need for the function returning the same output.
-Add exception handling library
+
 displayMenu non existent -- Get value of given key so the holding function of a key can be executed.
 
 
@@ -33,15 +40,13 @@ displayMenu non existent -- Get value of given key so the holding function of a 
 
 [ v0.3 ]
 	Changed AsciiFile class name to AsciiObject so it now supports the copy of insides of the directory provided
-Provide boolean copy_Recursive option to specify whether to copy the contents of directories found in <path> directory or not
 	
 	Updated version-tracker.txt
 	Updated code-structure.txt
 	Added libs/displayMenu.py, which contains DisplayMenu class
 	Changed few variable names for better code reading (handleAscii)
 
-Add functions that checks if path provides to file or folder -- HandleAscii
-Add check for the value that can't match a backpath
+displayMenu non existent -- Add check for the value that can't match a backpath
 displayMenu non existent -- Then make that option index can not be equal to back option  
 
 

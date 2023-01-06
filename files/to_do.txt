@@ -1,0 +1,13 @@
+-Update getMenuChoice so it can handle scenarios when user specifies some option and he wants to go back to select different option.
+-Develop getHashSum() AsciiObject function
+-Add ColorizeAscii class to the handleAscii
+-Proceed with backup process in backmaker.py
+
+-Add such screen clearing that when user inputs non-integer input it won't spam "provide int number" just reappear in one place
+-Make a way to display choices, like i.e when I'll specify Folder option, then I want to be asked whether this has to be recurisve or not
+	Same thing with lists, provided or default saved in script folder
+
+-Add exception handling library
+
+-Provide boolean copy_Recursive option to specify whether to copy the contents of directories found in <path> directory or not
+-Add functions that checks if path provides to file or folder -- HandleAscii
