@@ -1,4 +1,18 @@
-[ v0.4.2 ]
+[ v0.5.1 ]
+	-updated .gitignore
+	-handleAscii:
+		--Made getHashSum function much simpler. 
+			---It now uses f-strings so it is easier to keep the code not repeating. 
+			---It has an exception to handle for scenario when user provides not supported hash type.
+		--Added doesExistPath check in __init__ and raising FileNotFoundError on False so no more else is need for such check
+	-backmaker:
+		--Refactored backupFile function, it has now few nested try except blocks for differentiating the ErrorCodes
+			---When the backupFile calls AsciiObject, it now excepts only ValueError from that AsciiObject. It is nested inside the try block which excepts for Keyboard Interrupt while providing filepats  
+		--printDefaultChoice function now returns a list of choices provided by user.
+In printDefaultChoice make function that returns choices numbers automatically
+
+
+[ v0.5 ]
 	-backmaker:
 		--added input for absolute filepaths
 		--added isAbsolutePath check
@@ -8,8 +22,7 @@
 
 [ v0.4.1 ]
 	-Added F_go_back in getChoice() for later development
-	-Added to_do.txt to keep track of the tasks that are
- needed to be done or just some ideas.
+	-Added to_do.txt to keep track of the tasks that are needed to be done or just some ideas.
 
 
 [ v0.4 ]
@@ -17,9 +30,9 @@
 	
 	-Small code touches for sake of code beautifying (handleAscii)
 	-Completely removed displayMenu. 
-		At this moment it is more problematic than helpful. It was complete mess and disaster, even for such newbie project. Waste of time.
-		Just made the overall ( menu thing ) super simple so I can improve on it later. 
-			The Rome was also not Rome at it first days. It started from couple of buildings also :)
+		--At this moment it is more problematic than helpful. It was complete mess and disaster, even for such newbie project. Waste of time.
+		--Just made the overall ( menu thing ) super simple so I can improve on it later. 
+			---The Rome was also not Rome at it first days. It started from couple of buildings also :)
 	-Added few functions in backmaker instead
 
 	
@@ -28,13 +41,13 @@
 	-Modified getAbsolutePath
 	-Added isAbsolutePath to handleAscii
 	-displayMenu.__init__: Removed check that checks if boolean var is True after it has been checked for being False. 
-		If it is False, then it is not True, so set the corresponding value with False scenario.
-		-Later in __init__, divided M_menu_options into to *more* variables. One of them for menu_Keys, another for menu_Values.
-		They will store accordingly a user's provided text and the set of commands that will execute after choosing that key as a choice.
+		--If it is False, then it is not True, so set the corresponding value with False scenario.
+		--Later in __init__, divided M_menu_options into to *more* variables. One of them for menu_Keys, another for menu_Values.
+		--They will store accordingly a user's provided text and the set of commands that will execute after choosing that key as a choice.
 	-Renamed getKeyIndex to getOptionIndex 
 displayMenu non existent -- Improve getOptionIndex in displayMenu
 	-Removed getMenuKeys() from DisplayMenu. They are now provided as self objects of the class in init, along with menu_Values.
-	 Thus, no need for the function returning the same output.
+	 	--Thus, no need for the function returning the same output.
 
 displayMenu non existent -- Get value of given key so the holding function of a key can be executed.
 
@@ -68,9 +81,9 @@ displayMenu non existent -- Then make that option index can not be equal to back
 	Updated .gitignore: !__init__.py
 	Changed files extensions: files/*.txt
 	Divided methods in handleAscii.py on self-used and user-used. 
-		Self-used are those used between the functions for their better work.
-		User-used those mostly user-needed.
-		And they are not only "x-used" specific. This just means that they are most likely going to be used by "x-used" group of lib receivers.
+		--Self-used are those used between the functions for their better work.
+		--User-used those mostly user-needed.
+		--And they are not only "x-used" specific. This just means that they are most likely going to be used by "x-used" group of lib receivers.
 
 
 [ v0.2.1.3 ]
