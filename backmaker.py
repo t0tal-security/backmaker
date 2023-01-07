@@ -33,23 +33,36 @@ def getMenuChoice(F_go_back: bool=False) -> int:
 	return choice
 
 
+def backupFile() -> None:
+	paths = []
+	try:
+		file_Path = AsciiObject(input("\nProvide absolute file path: "))
+		paths.append(file_Path)
+
+		backup_Path = AsciiObject(input("Provide absolute backup path: "))
+		paths.append(backup_Path)	
+
+		for path in paths:
+			if path == False:
+				print(f"\nPath must be absolute!\nThis one '{path}' is not")
+				exit()	
+	except ValueError:
+		print(f"Specify the absolute path to the file you want to backup!")
+		exit()
+	except KeyboardInterrupt as KI:
+		print("\nTerminating!\n")
+		exit()
+
 
 def main() -> None:
-	sH.clearScreen()
-	printLogo()
-	printDefaultChoice()
+	#sH.clearScreen()
+	#printLogo()
+	#printDefaultChoice()
 
 	choice = getMenuChoice()
 
-	if choice == 1:
-		try:
-			file_Path 	= AsciiObject(input("\nProvide file path: "))
-			backup_Path = AsciiObject(input("Provide backup path: "))
-		except ValueError as VE:
-			print(f"\nE: {VE}")
-		except KeyboardInterrupt as KI:
-			print("\nTerminating!\n")
-			exit()
+	if choice == 1:		
+		backupFile()
 	elif choice == 2:
 		pass
 	elif choice == 3:

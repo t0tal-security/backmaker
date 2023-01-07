@@ -1,7 +1,15 @@
+[ v0.4.2 ]
+	-backmaker:
+		--added input for absolute filepaths
+		--added isAbsolutePath check
+	-Added libs/shell dir, inside hash sum getting scripts. 
+	-Removed dividing hashtags. Worthless. Making code less readable.
+
+
 [ v0.4.1 ]
 	-Added F_go_back in getChoice() for later development
-	-Added to_do.txt to keep track of the tasks that are needed to be done or just some ideas.
-
+	-Added to_do.txt to keep track of the tasks that are
+ needed to be done or just some ideas.
 
 
 [ v0.4 ]
@@ -15,9 +23,6 @@
 	-Added few functions in backmaker instead
 
 	
-
- 
-
 [ v0.3.2 ]
 	-Changed displayMenu getKeyValues(), variables and data types
 	-Modified getAbsolutePath
