@@ -11,17 +11,7 @@ def getSystemVersion() -> str:
     return platform.system()
 
 
-
-def clearScreen() -> None:
-    os_Version = getSystemVersion()
-
-    if os_Version == "Linux":
-        os.system("clear")
-        return None
-
-    if os_Version == "Windows":
-        os.system("cls")
-        return None
+def clearScreen() -> None:        
+    os.system("clear")
     
-    print("[Error] Unable to clear the screen")
 

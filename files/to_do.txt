@@ -1,17 +1,36 @@
--Update getMenuChoice so it can handle scenarios when user specifies some option and he wants to go back to select different option.
--Develop getHashSum() AsciiObject function
--Add ColorizeAscii class to the handleAscii
+backmaker:
+    --printDefaultChoices
+        ---Automatically return index numbers of available options
 
 
--Add such screen clearing that when user inputs non-integer input it won't spam "provide int number" just reappear in one place
--Make a way to display choices, like i.e when I'll specify Folder option, then I want to be asked whether this has to be recurisve or not
-	Same thing with lists, provided or default saved in script folder
+    --getMenuChoice:
+        ---Handle scenarios when user specifies some option and he wants to go back to select different option
+        ---Colorize somehow "[ backmaker ] >"
+    
 
--Add exception handling library
-
--Provide boolean copy_Recursive option to specify whether to copy the contents of directories found in <path> directory or not
--Add functions that checks if path provides to file or folder -- HandleAscii
-
+    --backupFile:
+        ---assignPaths
+            ----Check what will be returned when specified only 1 of the function's parameters - the one from function or from the try: except: statement?
 
 
-Done:
+handleAscii:
+    --Add ColorizeAscii class
+    --Finish getFileName function
+    --Add functions that checks if path provides to file or folder
+    --Provide boolean copy_Recursive option to specify whether to copy the contents of directories found in <path> directory or not
+    --Check how will the class react when list given
+
+
+libs:
+    --Make shell scripts also as one script?.
+
+
+systemHelpers ( ? ):
+    --Add such screen clearing that when user inputs non-integer input it won't spam "provide int number" just reappear in one place
+
+
+Add exception handling library
+
+
+
+Make interactive interface for backmaker 2.0 version

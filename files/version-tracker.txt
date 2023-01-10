@@ -1,3 +1,24 @@
+[ v0.5.2 ]
+	-backmaker:
+		--Added empty backupFolder & backupList functions
+		--Added choice handling
+		--In __name__ check, added another if statement checking whether the system is linux or not. If not, then exit, else the rest of the code is executed.
+		--Deleted else: statement. It won't be ever terminated as the AsciiObject will first say that file path can not be empty.
+		--In printLogo modified exit text messages.
+		--backupFile removed file_Path_Text and passed it straight forward inside the input.
+		--In backupFile, backupFolderContents & backupList added screen clearing and printing logo functions.
+	-libs/handleAscii:
+		--Modified getHashSum function, made it more readable, made it functioning more logic
+		---Made it also return dict of <hash_Type>: <hash_Sum>
+		--In sanitizeUserInput made an empty string or None check, and it returns "" if True
+	-libs/systemHelpers:
+		--Made clearScreen just clear screen
+	-libs/shell:
+		--Added copyFile.sh script
+	-visuals/logo.txt:
+		--Added "pipe wall" to extract some space for versioning pattern and author.
+
+
 [ v0.5.1 ]
 	-updated .gitignore
 	-handleAscii:
@@ -9,7 +30,7 @@
 		--Refactored backupFile function, it has now few nested try except blocks for differentiating the ErrorCodes
 			---When the backupFile calls AsciiObject, it now excepts only ValueError from that AsciiObject. It is nested inside the try block which excepts for Keyboard Interrupt while providing filepats  
 		--printDefaultChoice function now returns a list of choices provided by user.
-In printDefaultChoice make function that returns choices numbers automatically
+
 
 
 [ v0.5 ]
