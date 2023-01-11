@@ -1,4 +1,4 @@
-backmaker:
+backmaker.py:
     --printDefaultChoices
         ---Automatically return index numbers of available options
 
@@ -11,26 +11,37 @@ backmaker:
     --backupFile:
         ---assignPaths
             ----Check what will be returned when specified only 1 of the function's parameters - the one from function or from the try: except: statement?
+        ---Add filehashes to tmp file ( stored in tmp folder ), compare them and base on that verify whether the backup was successful or not.
 
 
-handleAscii:
+bm-config:
+    --Add first-startup checks i.e  int-IS_FIRST_STARTUP-0  <-- separate with dashes; 1st one is for program to know what value to expect
+                                    int-SAVE_HASH_HISTORY-0                           2nd is for option name
+                                                                                      3rd is for option value
+    --Make
+
+
+tmp:
+    --Add function that removes everything from tmp folder at the end of the program's work.
+
+
+handleAscii.py:
     --Add ColorizeAscii class
     --Finish getFileName function
     --Add functions that checks if path provides to file or folder
     --Provide boolean copy_Recursive option to specify whether to copy the contents of directories found in <path> directory or not
     --Check how will the class react when list given
+    --Make DisplayAscii inherit methods from AsciiObject
+    --Add path to getHashSum dict?
 
 
 libs:
     --Make shell scripts also as one script?.
 
 
-systemHelpers ( ? ):
+systemHelpers.py ( ? ):
     --Add such screen clearing that when user inputs non-integer input it won't spam "provide int number" just reappear in one place
 
 
 Add exception handling library
-
-
-
 Make interactive interface for backmaker 2.0 version

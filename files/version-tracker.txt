@@ -1,3 +1,25 @@
+[ v0.6 ]
+	This is the version where program is doing it's primary function for the very first time since it's beginning.
+	Added tmp folder for program temporary files
+	Added 'bm-config.conf' file for first-run program configuration settings.
+
+	[ backmaker.py ]:
+		-Added subprocess library, which is for subprocess.check_output function which executes 'cp' command.
+		-Changed functioning of the __name__ clause. Made it clear screen, print logo and then the "error code"
+	
+	[ libs/handleAscii.py ]:
+		-Added getFileName() function
+		-In getHashSum() changed subprocess.check_output to check output out of getAbsolutePath()
+		-Added DisplayAscii class
+	
+	[ visuals/logo.txt ]:
+		-Slightly modified
+		-Changed "Latest" to "Current"
+	
+	[ libs/shell ]:
+		-Removed copyFile.sh. This process is handled in backmaker.py: backupFile()
+
+
 [ v0.5.2 ]
 	-backmaker:
 		--Added empty backupFolder & backupList functions
@@ -6,7 +28,7 @@
 		--Deleted else: statement. It won't be ever terminated as the AsciiObject will first say that file path can not be empty.
 		--In printLogo modified exit text messages.
 		--backupFile removed file_Path_Text and passed it straight forward inside the input.
-		--In backupFile, backupFolderContents & backupList added screen clearing and printing logo functions.
+		--In backupFile -> backupFolderContents & backupList added screen clearing and printing logo functions.
 	-libs/handleAscii:
 		--Modified getHashSum function, made it more readable, made it functioning more logic
 		---Made it also return dict of <hash_Type>: <hash_Sum>

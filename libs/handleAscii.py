@@ -10,7 +10,7 @@ import subprocess
 
 class AsciiObject:
     def __init__(self, M_file_path: str="") -> None:
-        # Log message "Initialization of '<file>' file object"
+        # Log message "Initialization of AsciiObject: 'object, object_value'"
 
         self.file_Path = self.sanitizeUserInput(M_file_path)
 
@@ -21,7 +21,6 @@ class AsciiObject:
         if self.doesExistPath() == False:
             raise FileNotFoundError(f"'{self.getAbsolutePath()}' does not exist")
         
-
             
     def __str__(self) -> str:
         return self.file_Path
@@ -53,7 +52,9 @@ class AsciiObject:
 
 
     def getFileName(self) -> str:
-        pass
+        absolute_File_Path = self.getAbsolutePath()
+
+        return absolute_File_Path.split("/")[-1]        
 
 
     def getHashSum(self, M_hash_type: str="") -> str:
@@ -65,7 +66,7 @@ class AsciiObject:
         
         script_Absolute_Path = AsciiObject(f"libs/shell/getHash{hash_Type}.sh").getAbsolutePath()
         
-        hash_Sum = subprocess.check_output(["/usr/bin/bash", script_Absolute_Path, self.file_Path]).decode("utf-8")
+        hash_Sum = subprocess.check_output(["/usr/bin/bash", script_Absolute_Path, self.getAbsolutePath()]).decode("utf-8")
 
         return {hash_Type: hash_Sum}
 
@@ -82,6 +83,11 @@ class AsciiObject:
     def printFileContent(self) -> None:
         file_Content = self.readFileContent()
         print(file_Content) 
+
+
+class DisplayAscii:
+    def __init__(self):
+        pass
 
 
 

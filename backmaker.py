@@ -1,5 +1,9 @@
 #!/usr/bin/python3
+import subprocess
+import sys
+
 from libs.handleAscii import AsciiObject
+from libs.handleAscii import DisplayAscii
 import libs.systemHelpers as sH
 
 
@@ -58,20 +62,31 @@ def backupFile(F_file_path: str="", F_backup_path: str="") -> None:
 				print("Provide path!")
 				exit()
 			except FileNotFoundError:
-				print("File can not be found")
+				print("Path can not be found")
 				exit()
 
-		
 		return file_Path, backup_Path
 
-
-
-	file_Path, backup_Path = assignPaths()
+	
+	file_Path, backup_Path 					 = assignPaths()
+	absolute_File_Path, absolute_Backup_Path = file_Path.getAbsolutePath(), backup_Path.getAbsolutePath()
+	
 	origin_File_Hash = file_Path.getHashSum("SHA256")
-	print(origin_File_Hash)
 	
+	subprocess.check_output(["cp", absolute_File_Path, absolute_Backup_Path])
+	
+	copied_File_Path = f"{absolute_Backup_Path}/{file_Path.getFileName()}"
+	copied_File_Hash = AsciiObject(copied_File_Path).getHashSum("SHA256")
 	
 
+	if origin_File_Hash == copied_File_Hash:
+		print("File backup succeeded!")
+		exit()
+	else:
+		print("File backup failed!")
+		exit()
+	
+	
 def backupFolderContents() -> None:
 	sH.clearScreen()
 	printLogo()
@@ -89,6 +104,11 @@ def main() -> None:
 	sH.clearScreen()
 	printLogo()
 	
+	if len(sys.argv) > 1:
+		print("backmaker.py does not take any parameters!")
+		exit()
+
+	
 	try:
 		selectMenuChoice()
 	except KeyboardInterrupt as KI:
@@ -101,7 +121,9 @@ if __name__ == "__main__":
 	os_Version = sH.getSystemVersion()
 
 	if os_Version != "Linux":
-		print("Are you running linux?")
+		sH.clearScreen()
+		printLogo()
+		print(f"Your OS is not Linux!\nOS that you are running: {os_Version}")
 		exit()
 
 

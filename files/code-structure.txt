@@ -9,15 +9,7 @@ AsciiObject class
 	Will have several more functions beside those which are right now ( and which are pretty straightforward ).
 
 
-DisplayMenu
-def __init__(self, M_menu_message: tuple,  M_menu_options: dict, M_options_Count_From: int=1, M_menu_tab_indents: int=0) -> None:
-	M_menu_message: gets pair with "Message" and Tabs Indentations
 
-	Simple class displaying a menu options provided by user.
-    It gets a dictionary of elements where:
-        keys:   are the options user wants to display --> [M_options_Count_From] {M_user_input}
-
-        values: are the functions that will be initialized after call
 
 systemHelpers functions
 	functions that support retrieving values that would not fit on the class matter
